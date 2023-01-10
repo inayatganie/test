@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import { dasboard, back, forward, tick } from '../../Utils/images';
+import {dasboard, back, forward, tick} from '../../Utils/images';
 import styles from './styles';
 import {
   widthPercentageToDP as wp,
@@ -21,7 +21,7 @@ import {
   KnowledgeData,
   chatData,
 } from '../../Utils/data';
-import { COLORS } from '../../Utils/theme';
+import {COLORS} from '../../Utils/theme';
 
 const FamilyDashboard = (props: any) => {
   const __renderSavings = () =>
@@ -47,7 +47,7 @@ const FamilyDashboard = (props: any) => {
               props.navigation.navigate(item.navigate);
             }
           }}>
-          <Text style={{ color: '#7F18D0' }}>{item.subTitle}</Text>
+          <Text style={{color: '#7F18D0'}}>{item.subTitle}</Text>
           <Image source={forward} style={styles.portImg} />
         </TouchableOpacity>
       </View>
@@ -56,15 +56,12 @@ const FamilyDashboard = (props: any) => {
   const __renderTransactions = () =>
     RecentTransactions?.map((item, index) => (
       <View key={index} style={styles.portInner}>
-        <View style={{ flexDirection: 'row' }}>
-          <Image
-            source={tick}
-            style={styles.tnsImg}
-          />
+        <View style={{flexDirection: 'row'}}>
+          <Image source={tick} style={styles.tnsImg} />
           <Text>
             {item.title}
             {'\n'}
-            <Text style={{ color: '#4B4B4B' }}>{item.subTitle}</Text>
+            <Text style={{color: '#4B4B4B'}}>{item.subTitle}</Text>
           </Text>
         </View>
         <View style={styles.portSubMain}>
@@ -76,11 +73,11 @@ const FamilyDashboard = (props: any) => {
   const __renderKnowladge = () =>
     KnowledgeData?.map((item, index) => (
       <View key={index} style={styles.portInner}>
-        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <View style={styles.familyView}>
             <Image source={item.img} style={styles.familyIcon} />
           </View>
-          <Text style={{ marginLeft: wp(2) }}>{item.title}</Text>
+          <Text style={{marginLeft: wp(2)}}>{item.title}</Text>
         </View>
       </View>
     ));
@@ -92,15 +89,15 @@ const FamilyDashboard = (props: any) => {
           styles.chartLine,
           {
             height: hp(index * 1.7),
-
-          }]}>
+          },
+        ]}>
         <View
           style={[
             styles.chartLine2,
             {
               height: index <= 2 ? hp(2) : hp(index),
-
-            }]}
+            },
+          ]}
         />
       </View>
     ));
@@ -132,10 +129,7 @@ const FamilyDashboard = (props: any) => {
           <View style={styles.familyMain}>{__renderSavings()}</View>
           <View style={styles.portMain}>{__renderPortFolio()}</View>
           <View style={styles.portMain}>
-            <Text
-              style={styles.trns}>
-              Recent Transactions
-            </Text>
+            <Text style={styles.trns}>Recent Transactions</Text>
             {__renderTransactions()}
             <TouchableOpacity
               onPress={() => props.navigation.navigate('FamilyDashboard')}

@@ -43,7 +43,7 @@ const FamilyDashboard = (props: any) => {
   useEffect(() => {
     progress.value = withTiming(1, {duration: 2000});
   }, []);
-  
+
   const animatedProps = useAnimatedProps(() => ({
     strokeDashoffset: circle_length * progress.value,
   }));
@@ -154,22 +154,16 @@ const FamilyDashboard = (props: any) => {
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <View style={styles.MainContainer}>
-          <View
-            style={styles.backMain}>
+          <View style={styles.backMain}>
             <TouchableOpacity onPress={() => props.navigation.goBack()}>
               <Image source={back} style={styles.back} />
             </TouchableOpacity>
-            <View
-              style={styles.question}>
+            <View style={styles.question}>
               <Text style={styles.mark}>?</Text>
             </View>
           </View>
-          <Text
-            style={styles.title}>
-            Aggressive Portfolio
-          </Text>
-          <View
-            style={styles.ringMain}>
+          <Text style={styles.title}>Aggressive Portfolio</Text>
+          <View style={styles.ringMain}>
             <Ring fill={false} />
             <Ring fill={false} />
             <Ring fill={false} />
