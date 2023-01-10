@@ -1,0 +1,11 @@
+export const getStarted = require('../Assets/Images/Coins-amico.png');
+export const dasboard = require('../Assets/Images/dasboard.png');
+export const back = require('../Assets/Images/back.png');
+export const Vector = require('../Assets/Images/Vector.png');
+export const user = require('../Assets/Images/user.png');
+export const money = require('../Assets/Images/money.png');
+export const forward = require('../Assets/Images/forward.png');
+export const tick = require('../Assets/Images/tick.png');
+export const multiUser = require('../Assets/Images/3User.png');
+export const rotateRight = require('../Assets/Images/rotate-right.png');
+export const wallet = require('../Assets/Images/wallet-minus.png');
